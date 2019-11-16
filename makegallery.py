@@ -26,13 +26,13 @@ def main():
     # check for args and assign directory list
     if args.dir:
         # arg has dir
-        dirlist.append(args.dir.replace("\\","/"))
+        dirlist.append(args.dir.replace("\\","/"))   # For Windows, back slashes to forward slashes
     elif args.queue:
         # read file, fill list
         f = open(args.queue, "r")
         for x in f:
             x=x.rstrip()
-            x=x.replace("\\","/")
+            x=x.replace("\\","/")   # For Windows, back slashes to forward slashes
             dirlist.append(x)
     else:
         # use filedialog.askdirectory for dir

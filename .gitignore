@@ -5,3 +5,4 @@
 *.jpg
 *checkpoint.ipynb
 .nomedia
+/photos/*
