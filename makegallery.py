@@ -83,7 +83,7 @@ def main():
             if fnmatch.fnmatch(entry, pattern):
                 img = Image.open(entry)
                 print (entry)
-                #resize
+                # resize images to tn directory
                 wpercent = (mywidth/float(img.size[0]))
                 hsize = int((float(img.size[1])*float(wpercent)))
                 img = img.resize((mywidth,hsize), PIL.Image.ANTIALIAS)
@@ -102,6 +102,7 @@ def main():
         # write the json file
         with open('gallery.json', 'w', encoding='utf-8') as f:
             json.dump(gallery, f, ensure_ascii=False, indent=4)            
+
 
 
 if __name__ == "__main__":
