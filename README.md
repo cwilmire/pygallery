@@ -6,3 +6,4 @@ Can take args for target directory or file with list of directories.
      --dir or -d for "specify directory"
      --queue or -q for "specify queue.txt file"
 
+## How does it work?

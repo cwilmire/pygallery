@@ -40,7 +40,7 @@ def main():
         folder_selected = folder_selected.replace("\\","/")
         dirlist.append(folder_selected)
 
-    # Set tn photo width
+    # Set thumbnail photo width
     mywidth = 400   
 
     # original directory where app is launched
@@ -86,7 +86,7 @@ def main():
                 # resize images to tn directory
                 wpercent = (mywidth/float(img.size[0]))
                 hsize = int((float(img.size[1])*float(wpercent)))
-                img = img.resize((mywidth,hsize), PIL.Image.ANTIALIAS)
+                img = img.resize((mywidth,hsize), PIL.Image.Resampling.LANCZOS)
                 fl = 'tn/'+entry
                 try:
                     exif = img.info['exif']
@@ -102,8 +102,6 @@ def main():
         # write the json file
         with open('gallery.json', 'w', encoding='utf-8') as f:
             json.dump(gallery, f, ensure_ascii=False, indent=4)            
-
-
 
 
 if __name__ == "__main__":
