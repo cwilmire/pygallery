@@ -40,7 +40,7 @@ def main():
         folder_selected = folder_selected.replace("\\","/")
         dirlist.append(folder_selected)
 
-    # Set tn photo width
+    # Set thumbnail photo width
     mywidth = 400   
 
     # original directory where app is launched
